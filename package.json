@@ -4,10 +4,9 @@
   "description": "Broker server in Legion Global",
   "main": "dist/server.js",
   "scripts": {
-    "tsc": "node ./node_modules/typescript/bin/tsc",
-    "build": "npm run tsc",
-    "prestart": "npm run build",
-    "start": "node .",
+    "tsc": "tsc",
+    "start": "node dist/server.js",
+    "postinstall": "npm run tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
