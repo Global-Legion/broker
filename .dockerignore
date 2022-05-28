@@ -1,5 +1,6 @@
 .dockerignore
 Dockerfile
 LICENSE
+README.md
 dist/*
 node_modules/*
