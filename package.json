@@ -4,7 +4,8 @@
   "description": "Broker server in Legion Global",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "tsc": "tsc",
+    "build": "npm run tsc",
     "prestart": "npm run build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
