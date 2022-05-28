@@ -1,0 +1,19 @@
+{
+  "name": "broker",
+  "version": "0.1.0",
+  "description": "Broker server in Legion Global",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Global-Legion/broker.git"
+  },
+  "author": "Alessandro Talmi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Global-Legion/broker/issues"
+  },
+  "homepage": "https://github.com/Global-Legion/broker#readme"
+}
