@@ -1,0 +1,24 @@
+name: Push Edge's production Image to Docker Hub
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy-dev-image:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Login to Heroku Container registry
+      env: 
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku container:login
+    - name: Build container and push
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku container:push -a ${{ secrets.BROKER_DEV_NAME }} web 
+    - name: Release container
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku container:release -a ${{ secrets.BROKER_DEV_NAME }} web
