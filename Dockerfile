@@ -3,7 +3,7 @@ COPY package.json .
 COPY package-lock.json .
 COPY tsconfig.json .
 RUN npm install -g typescript
-RUN	npm install --silent
+RUN	npm ci
 COPY . .
 RUN npm run build
 CMD node dist/server.js
