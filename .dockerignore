@@ -2,5 +2,6 @@
 Dockerfile
 LICENSE
 README.md
+.github/*
 dist/*
 node_modules/*
