@@ -1,0 +1,5 @@
+.dockerignore
+Dockerfile
+LICENSE
+dist/*
+node_modules/*
