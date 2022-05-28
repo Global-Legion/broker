@@ -5,4 +5,5 @@ COPY tsconfig.json .
 COPY tslint.json .
 RUN	npm install --silent
 COPY . .
-CMD npm run start
+RUN npm run build
+CMD node dist/server.js
