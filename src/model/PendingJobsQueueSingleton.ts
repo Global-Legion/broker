@@ -17,7 +17,11 @@ export default class PendingJobQueueSingleton
         return this.queue.shift()
     }
 
+    public static createInstance(){
+        this._instance = new this()
+    }
+
     public static get instance(){
-        return this._instance || (this._instance = new this())
+        return this._instance
     }
 }
